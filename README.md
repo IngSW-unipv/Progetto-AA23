@@ -1,4 +1,4 @@
-Recerve e un softuare per la prenotazione di veicoli
+Recerve e un software per la prenotazione di veicoli
 
 il software consente:
 - la creazione di un account
