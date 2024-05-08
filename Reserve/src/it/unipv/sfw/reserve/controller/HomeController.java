@@ -49,6 +49,7 @@ public class HomeController {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		ConfermaView confermaView = new ConfermaView();
+		@SuppressWarnings("unused")
 		EliminaAccountController controller = new EliminaAccountController(model, confermaView, view);
 		
 	}
