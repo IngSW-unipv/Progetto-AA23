@@ -118,4 +118,29 @@ public class UtenteDB {
 	        } 
 	        stmt.close();
 	    }
+	    
+	    public void eliminaAccount(String username) throws SQLException, NoSuchAlgorithmException {
+
+	    	 // Connessione al database
+	    	DBConnection d =new DBConnection();
+	       	Connection con=null;
+	       	con=d.connessione(con);
+	        PreparedStatement stmt = null;
+
+	        try {
+	            // Inserimento dei dati nella tabella user
+	            String sql = "DELETE FROM utente WHERE username = ?";
+	            stmt = con.prepareStatement(sql);
+	            stmt.setString(1, username);
+	           
+	            
+	            
+	            stmt.executeUpdate();  
+	            
+	        } catch (SQLException e) {
+	        	
+	        } 
+	        stmt.close();
+	    }
+	    
 }

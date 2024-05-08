@@ -2,21 +2,19 @@ package it.unipv.sfw.reserve.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.security.NoSuchAlgorithmException;
+import java.sql.SQLException;
 
+import it.unipv.sfw.reserve.model.*;
+import it.unipv.sfw.reserve.view.*;
 
-import it.unipv.sfw.reserve.model.Utente;
-import it.unipv.sfw.reserve.view.HomeView;
-import it.unipv.sfw.reserve.view.LoginView;
-import it.unipv.sfw.reserve.view.ConfermaView;
-
-public class LogoutController {
-
+public class EliminaAccountController {
+	
 	private Utente model;
 	private ConfermaView view;
 	private HomeView homeView;
 	
-	
-	public LogoutController(ConfermaView view,HomeView homeView,Utente model) {
+	public EliminaAccountController(Utente model, ConfermaView view, HomeView homeView) {
 		this.model = model;
 		this.view = view;
 		this.homeView = homeView;
@@ -26,12 +24,19 @@ public class LogoutController {
 		this.view.getBtnSi().addActionListener(new ButtonSi());
 		
 	}
-
+	
 	// GESTIONE BOTTONE SI	
 	class ButtonSi implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			
+			try {
+				model.eliminaAccount();
+			} catch (NoSuchAlgorithmException | SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			model.logout(model.isLogin());
 			Utente modelUtente =new Utente(null, null, null, null, null, false, null);
 			view.dispose();
@@ -55,12 +60,7 @@ public class LogoutController {
 	
 		
 	}
+	
+	
+
 }
-	
-
-		
-	
-		
-		
-	
-

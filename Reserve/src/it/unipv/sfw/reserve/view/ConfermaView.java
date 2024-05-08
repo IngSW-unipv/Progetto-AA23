@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
 
-public class LogoutView extends JFrame {
+public class ConfermaView extends JFrame {
 
 	/**
 	 * 
@@ -26,7 +26,7 @@ public class LogoutView extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					LogoutView frame = new LogoutView();
+					ConfermaView frame = new ConfermaView();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -38,7 +38,7 @@ public class LogoutView extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public LogoutView() {
+	public ConfermaView() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 284, 168);
 		contentPane = new JPanel();

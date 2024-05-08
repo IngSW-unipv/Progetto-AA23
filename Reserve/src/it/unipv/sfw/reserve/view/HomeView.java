@@ -16,6 +16,7 @@ public class HomeView extends JFrame {
 	private JButton btnLePrenotazioni;
 	private JButton btnLogout;
 	private JButton btnPrenota;
+	private JButton btnEliminaAccount;
 	private JPanel panel_1;
 	private JLabel lblNewLabel_2;
 	private JDateChooser dateChooserDataI;
@@ -24,7 +25,7 @@ public class HomeView extends JFrame {
 
 	public HomeView() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 528, 275);
+		setBounds(100, 100, 528, 267);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -42,12 +43,16 @@ public class HomeView extends JFrame {
 		panel.add(btnLePrenotazioni);
 		
 		btnLogout = new JButton("LogOut");
-		btnLogout.setBounds(0, 149, 193, 41);
+		btnLogout.setBounds(0, 189, 193, 41);
 		panel.add(btnLogout);
 		
 		panel_1 = new JPanel();
 		panel_1.setBounds(0, 0, 519, 78);
 		panel.add(panel_1);
+		
+		btnEliminaAccount = new JButton("Elimina Account");
+		btnEliminaAccount.setBounds(0, 150, 193, 41);
+		panel.add(btnEliminaAccount);
 		
 		JLabel lblNewLabel = new JLabel("Da");
 		lblNewLabel.setBounds(203, 91, 50, 14);
@@ -102,6 +107,9 @@ public class HomeView extends JFrame {
 		return btnLogout;
 	}
 
+	public JButton getBtnEliminaAccount() {
+		return btnEliminaAccount;
+	}
 
 	public JPanel getPanel_1() {
 		return panel_1;

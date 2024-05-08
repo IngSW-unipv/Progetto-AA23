@@ -112,6 +112,16 @@ public class Utente {
 		
 		
 	}
+	
+	public void eliminaAccount() throws NoSuchAlgorithmException, SQLException {
+		
+		DatabaseFacade facadeDB = new DatabaseFacade();
+		// eliminazione di tutte le prenotazioni nel db
+		facadeDB.getPrenotazioniDB().eliminaPrenotazioneAccount(username);
+		// eliminazione del account
+		facadeDB.getUtenteDB().eliminaAccount(username);
+		
+	}
 
 	public String getUsername() {
 		return username;

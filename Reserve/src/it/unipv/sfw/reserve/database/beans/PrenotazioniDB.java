@@ -111,6 +111,30 @@ public class PrenotazioniDB {
 	        stmt.close();
 	    }
 	    
+//QUERY ELIMINAZIONE DI UN PRENOTAZIONE DATO L'USERNAME
+	    
+	    public void eliminaPrenotazioneAccount(String username) throws SQLException, NoSuchAlgorithmException {
+
+	    	 // Connessione al database
+	    	DBConnection d =new DBConnection();
+	       	Connection con=null;
+	       	con=d.connessione(con);
+	        PreparedStatement stmt = null;
+
+	        try {
+	            // Inserimento dei dati nella tabella user
+	            String sql = "DELETE FROM prenotazioni WHERE username = ?";
+	            stmt = con.prepareStatement(sql);
+	            stmt.setString(1, username);
+	            
+	            stmt.executeUpdate();  
+	            
+	        } catch (SQLException e) {
+	        	
+	        } 
+	        stmt.close();
+	    }
+	    
 
 
 }

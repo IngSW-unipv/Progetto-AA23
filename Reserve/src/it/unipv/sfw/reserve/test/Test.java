@@ -16,7 +16,7 @@ public class Test {
 		LoginView view= new LoginView();
 		@SuppressWarnings("unused")
 		LoginController controller = new LoginController(view, model);
-
+		
 		
 	}
 

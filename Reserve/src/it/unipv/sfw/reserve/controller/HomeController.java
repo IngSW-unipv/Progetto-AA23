@@ -24,6 +24,7 @@ public class HomeController {
 		this.view.getBtnLogout().addActionListener(new ButtonLogout());
 		this.view.getBtnLePrenotazioni().addActionListener(new ButtonLePrenotazioni());
 		this.view.getBtnPrenota().addActionListener(new ButtonPrenota());
+		this.view.getBtnEliminaAccount().addActionListener(new ButtoneEliminaAccount());
 		
 	}
 	
@@ -32,14 +33,29 @@ public class HomeController {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			LogoutView logoutView = new LogoutView();
+			ConfermaView confermaView = new ConfermaView();
 			@SuppressWarnings("unused")
-			LogoutController controller= new LogoutController(logoutView,view,model);
+			LogoutController controller= new LogoutController(confermaView,view,model);
 			
 			
 		}
 		
 	}
+	
+// GESTIONE BOTTONE ELIMINA ACCOUNT
+		public class ButtoneEliminaAccount implements ActionListener {
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		ConfermaView confermaView = new ConfermaView();
+		EliminaAccountController controller = new EliminaAccountController(model, confermaView, view);
+		
+	}
+
+		
+			
+		}
 // GESTIONE BOTTONE VISULAZZA LE PRENOTAZIONI
 	public class ButtonLePrenotazioni implements ActionListener {
 
