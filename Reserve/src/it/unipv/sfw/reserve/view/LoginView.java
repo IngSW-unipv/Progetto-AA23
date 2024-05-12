@@ -117,6 +117,12 @@ public class LoginView extends JFrame {
 	}
 
 	
+	public void changeColorError() {
+		textFieldUsername.setBackground(new Color(240, 115, 119));
+		passwordField.setBackground(new Color(240, 115, 119));
+		
+	}
+	 
 	
 	
 }

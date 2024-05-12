@@ -45,7 +45,11 @@ public class RegistrazioneController {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
-			
+			// controllo se i campi non sono vuoti
+			if(!view.getTextFieldUsername().getText().isEmpty() && !view.getTextFieldNome().getText().isEmpty()
+					&& !view.getTextFieldCognome().getText().isEmpty() && !view.getTextFieldaPassword().getText().isEmpty()
+					&& !view.getTextFieldNumPatente().getText().isEmpty()) {
+				
 			model.registrazione(view.getTextFieldUsername().getText(), view.getTextFieldNome().getText()
 					, view.getTextFieldCognome().getText(), view.getTextFieldaPassword().getText()
 					, view.getTextFieldNumPatente().getText());
@@ -55,6 +59,14 @@ public class RegistrazioneController {
 			@SuppressWarnings("unused")
 			LoginController controller =new LoginController(loginView, modelUtente);
 			
+			}else {
+				view.dispose();
+				RegistrazioneView registrazioneView = new RegistrazioneView();
+				registrazioneView.changeColorError();
+				@SuppressWarnings("unused")
+				RegistrazioneController controller = new RegistrazioneController(registrazioneView, model);
+				
+			}
 			
 		}
 		

@@ -30,14 +30,22 @@ public class LoginController {
 		public void actionPerformed(ActionEvent e) {
 			
 			
-			view.dispose();
+			
 			model.login(view.getTextFieldUsername().getText(), view.getPasswordField().getText());
 			if(model.isLogin()) {
+				view.dispose();
 			HomeView homeView = new HomeView();
 			@SuppressWarnings("unused")
 			
 			HomeController controller = new HomeController(homeView, model);
 			
+			}else {
+				view.dispose();
+				LoginView loginView = new LoginView();
+				loginView.changeColorError();
+				@SuppressWarnings("unused")
+				LoginController controller = new LoginController(loginView, model);
+				
 			}
 			
 			
