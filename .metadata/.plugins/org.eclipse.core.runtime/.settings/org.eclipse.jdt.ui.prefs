@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="it.unipv.sfw.reserve.controller.EliminaAccountController"><rhs name\="it.unipv.sfw.reserve.controller.EliminaAccountController"/></lhs><lhs name\="it.unipv.sfw.reserve.model.Utente"><rhs name\="it.unipv.sfw.reserve.model.Utente"/></lhs></history>
 content_assist_number_of_computers=13
+=======
+content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaPostfixProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.javaChainProposalCategory\u0000
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="javax.swing.JFrame"><rhs name\="it.unipv.sfw.reserve.view.RegistrazioneView"/></lhs><lhs name\="javax.swing.WindowConstants"><rhs name\="it.unipv.sfw.reserve.view.RegistrazioneView"/></lhs><lhs name\="javax.accessibility.Accessible"><rhs name\="it.unipv.sfw.reserve.view.RegistrazioneView"/></lhs><lhs name\="javax.swing.RootPaneContainer"><rhs name\="it.unipv.sfw.reserve.view.RegistrazioneView"/></lhs><lhs name\="javax.swing.TransferHandler$HasGetTransferHandler"><rhs name\="it.unipv.sfw.reserve.view.RegistrazioneView"/></lhs><lhs name\="java.awt.Frame"><rhs name\="it.unipv.sfw.reserve.view.RegistrazioneView"/></lhs><lhs name\="java.awt.MenuContainer"><rhs name\="it.unipv.sfw.reserve.view.RegistrazioneView"/></lhs><lhs name\="java.awt.Window"><rhs name\="it.unipv.sfw.reserve.view.RegistrazioneView"/></lhs><lhs name\="java.awt.Container"><rhs name\="it.unipv.sfw.reserve.view.RegistrazioneView"/></lhs><lhs name\="java.awt.Component"><rhs name\="it.unipv.sfw.reserve.view.RegistrazioneView"/></lhs><lhs name\="java.awt.image.ImageObserver"><rhs name\="it.unipv.sfw.reserve.view.RegistrazioneView"/></lhs><lhs name\="it.unipv.sfw.reserve.view.RegistrazioneView"><rhs name\="it.unipv.sfw.reserve.view.RegistrazioneView"/></lhs></history>
+content_assist_number_of_computers=16
+>>>>>>> 1a511d98b3759cfa1d1d6ded9c26b8c9a255f26d
 content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=0,0,0
 eclipse.preferences.version=1
-org.eclipse.jdt.ui.formatterprofiles.version=20
+org.eclipse.jdt.ui.formatterprofiles.version=23
 spelling_locale_initialized=true
+typefilter_migrated_2=true
 useAnnotationsPrefPage=true
 useQuickDiffPrefPage=true

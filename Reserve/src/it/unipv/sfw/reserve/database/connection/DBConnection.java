@@ -11,7 +11,7 @@ public class DBConnection {
 	
 	    private String url = "jdbc:mysql://localhost:3306/Db";
 	    private String user = "root";
-	    private String password = "Biuss90!";
+	    private String password = "password";
 	    private String driver = "com.mysql.cj.jdbc.Driver";
 
 	    public Connection connessione(Connection con) {

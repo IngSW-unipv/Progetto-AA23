@@ -1,5 +1,6 @@
 package it.unipv.sfw.reserve.view;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -110,6 +111,14 @@ public class RegistrazioneView extends JFrame {
 		contentPane.add(btnRegistrati);
 		
 		setVisible(true);
+	}
+	
+	public void changeColorError() {
+		textFieldUsername.setBackground(new Color(240, 115, 119));
+		textFieldNome.setBackground(new Color(240, 115, 119));
+		textFieldCognome.setBackground(new Color(240, 115, 119));
+		textFieldNumPatente.setBackground(new Color(240, 115, 119));
+		textFieldaPassword.setBackground(new Color(240, 115, 119));
 	}
 
 	public JPanel getContentPane() {
