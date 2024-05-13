@@ -127,7 +127,7 @@ public class HomeController {
 			 
 				try {
 					targhePrenotate = prenotazione.daiTargaPrenotata(dateInizio, dataFine);
-					auto =veicolo.OttieniVeicoliDaPrenoatre(targhePrenotate);
+					auto =veicolo.ottieniVeicoliDaPrenoatre(targhePrenotate);
 					
 					for(Veicolo automobili :auto) {
 						

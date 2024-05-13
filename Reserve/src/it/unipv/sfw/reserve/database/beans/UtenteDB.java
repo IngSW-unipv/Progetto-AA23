@@ -112,7 +112,7 @@ public class UtenteDB {
 	            
 	            
 	            stmt.executeUpdate();
-	            JOptionPane.showMessageDialog(null, "Registrazione completata con successo");        
+	                 
 	        } catch (SQLException e) {
 	        	
 	        } 

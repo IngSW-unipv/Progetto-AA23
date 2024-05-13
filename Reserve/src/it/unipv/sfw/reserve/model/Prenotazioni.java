@@ -32,6 +32,7 @@ public class Prenotazioni {
 		return targhe;
 		
 	}
+	
 
 
 	public java.sql.Date getDataI() {

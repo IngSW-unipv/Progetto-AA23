@@ -52,7 +52,7 @@ public class Veicolo {
 	}
 	
 //METODO PER OTTENERE UN VEICOLO DATA UNA TARGA
-	public ArrayList <Veicolo> OttieniVeicoliDaPrenoatre(ArrayList<String> targhe) throws ParseException{
+	public ArrayList <Veicolo> ottieniVeicoliDaPrenoatre(ArrayList<String> targhe) throws ParseException{
 		
 		DatabaseFacade facade= new DatabaseFacade ();
 		
