@@ -14,9 +14,7 @@ import javax.swing.JButton;
 
 public class PrenotazioneRiepilogoView extends JFrame {
 
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 
 	private JPanel contentPane;

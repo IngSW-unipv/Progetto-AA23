@@ -2,12 +2,15 @@ package it.unipv.sfw.reserve.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import javax.swing.table.DefaultTableModel;
 
+import it.unipv.sfw.reserve.controller.LePrenotazioniController.ChiudiReserve;
 import it.unipv.sfw.reserve.database.databasefacade.DatabaseFacade;
 import it.unipv.sfw.reserve.model.Prenotazioni;
 import it.unipv.sfw.reserve.model.Utente;
@@ -31,6 +34,7 @@ public class PrenotaController {
 		//AGGIUNTA DEI BOTTONI DELLA VIEW
 		this.autoView.getBtnPrenota().addActionListener(new ButtonPrenota());
 		this.autoView.getBtnIndietro().addActionListener(new ButtonIndietro());
+		this.autoView.addWindowListener(new ChiudiReserve());
 		
 	}
 	
@@ -113,6 +117,56 @@ public class PrenotaController {
 			@SuppressWarnings("unused")
 			HomeController controller = new HomeController(homeView, modelUtente);
 			
+			
+		}
+		
+	}
+	
+	public class ChiudiReserve implements WindowListener {
+
+
+		@Override
+		public void windowOpened(WindowEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void windowClosing(WindowEvent e) {
+			// TODO Auto-generated method stub
+			
+			modelUtente.logout(true);
+			autoView.dispose();
+			
+		}
+
+		@Override
+		public void windowClosed(WindowEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void windowIconified(WindowEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void windowDeiconified(WindowEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void windowActivated(WindowEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void windowDeactivated(WindowEvent e) {
+			// TODO Auto-generated method stub
 			
 		}
 		

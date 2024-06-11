@@ -11,9 +11,7 @@ import javax.swing.JButton;
 
 public class ConfermaView extends JFrame {
 
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JButton btnNo;
