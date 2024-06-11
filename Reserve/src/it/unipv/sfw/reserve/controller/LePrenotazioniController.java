@@ -2,6 +2,8 @@ package it.unipv.sfw.reserve.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
 
@@ -22,6 +24,7 @@ public class LePrenotazioniController {
 		// BOTTONI DELLA VIEW
 		this.view.getBtnIndietro().addActionListener(new ButtonIndietro());
 		this.view.getBtnElimina().addActionListener(new ButtonElimina());
+		this.view.addWindowListener(new ChiudiReserve());
 		
 	}
 	
@@ -67,6 +70,55 @@ public class LePrenotazioniController {
 		
 	}
 	
+	public class ChiudiReserve implements WindowListener {
+
+
+		@Override
+		public void windowOpened(WindowEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void windowClosing(WindowEvent e) {
+			// TODO Auto-generated method stub
+			
+			model.logout(true);
+			view.dispose();
+			
+		}
+
+		@Override
+		public void windowClosed(WindowEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void windowIconified(WindowEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void windowDeiconified(WindowEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void windowActivated(WindowEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void windowDeactivated(WindowEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
 
 }
 
