@@ -40,7 +40,7 @@ public class UtenteDB {
 	         }
 
 	 }
-//query per verificare l'esistenza del utente 
+//query per verificare il login
 	 
 	    public boolean login(String username, String password) throws SQLException {
 	        Connection conn = null;
@@ -141,6 +141,44 @@ public class UtenteDB {
 	        	
 	        } 
 	        stmt.close();
+	    }
+	    
+// query controllo esistenza utente
+	    
+	    public boolean exists(String username)throws SQLException {
+	        Connection conn = null;
+	        DBConnection d =new DBConnection();
+	       	conn=d.connessione(conn);        
+	        PreparedStatement stmt = null;
+	        ResultSet rs = null;
+	        boolean count = false;
+	    
+	        try {
+	            
+	            String sql = "SELECT * FROM utente WHERE username = ?";
+	            stmt = conn.prepareStatement(sql);
+	            stmt.setString(1, username);
+
+	            rs = stmt.executeQuery();
+
+	            if (rs.next()) {
+	            
+	                count = true;
+	            }
+	        } finally {
+	            if (rs != null) {
+	                rs.close();
+	            }
+	            if (stmt != null) {
+	                stmt.close();
+	            }
+	            if (conn != null) {
+	                conn.close();
+	            }
+	        }
+	       
+	        return count;
+	       
 	    }
 	    
 }

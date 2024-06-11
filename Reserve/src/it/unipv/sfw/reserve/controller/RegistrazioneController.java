@@ -42,24 +42,27 @@ public class RegistrazioneController {
 // GESTIONE BOTTONE REGISTRAZIONE	
 	public class ButtonRegistrati implements ActionListener {
 
+		@SuppressWarnings("deprecation")
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
 			// controllo se i campi non sono vuoti
 			if(!view.getTextFieldUsername().getText().isEmpty() && !view.getTextFieldNome().getText().isEmpty()
-					&& !view.getTextFieldCognome().getText().isEmpty() && !view.getTextFieldaPassword().getText().isEmpty()
+					&& !view.getTextFieldCognome().getText().isEmpty() && !view.getPasswordField().getText().isEmpty()
 					&& !view.getTextFieldNumPatente().getText().isEmpty()) {
 				
 			model.registrazione(view.getTextFieldUsername().getText(), view.getTextFieldNome().getText()
-					, view.getTextFieldCognome().getText(), view.getTextFieldaPassword().getText()
+					, view.getTextFieldCognome().getText(), view.getPasswordField().getText()
 					, view.getTextFieldNumPatente().getText());
+			
 			view.dispose();
+			
 			Utente modelUtente = new Utente(null, null, null, null, null, false, null);
 			LoginView loginView = new LoginView();
 			@SuppressWarnings("unused")
 			LoginController controller =new LoginController(loginView, modelUtente);
 			
-			}else {
+			}else{
 				view.dispose();
 				RegistrazioneView registrazioneView = new RegistrazioneView();
 				registrazioneView.changeColorError();

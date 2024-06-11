@@ -1,7 +1,7 @@
 package it.unipv.sfw.reserve.view;
 
 import java.awt.Color;
-import java.awt.EventQueue;
+
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -9,41 +9,24 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JButton;
+import javax.swing.JPasswordField;
+import java.awt.Font;
 
 public class RegistrazioneView extends JFrame {
 
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField textFieldUsername;
 	private JTextField textFieldNome;
 	private JTextField textFieldCognome;
 	private JTextField textFieldNumPatente;
-	private JTextField textFieldaPassword;
 	private JButton btnLogin;
 	private JButton btnRegistrati;
+	private final JPasswordField passwordField = new JPasswordField();
+	private JLabel lblNewLabel;
 	
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					RegistrazioneView frame = new RegistrazioneView();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
-	/**
-	 * Create the frame.
-	 */
 	public RegistrazioneView() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 320);
@@ -56,6 +39,14 @@ public class RegistrazioneView extends JFrame {
 		JPanel panel = new JPanel();
 		panel.setBounds(0, 0, 166, 281);
 		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		lblNewLabel = new JLabel("utente esistente");
+		lblNewLabel.setForeground(Color.RED);
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel.setBounds(10, 256, 127, 14);
+		panel.add(lblNewLabel);
+		lblNewLabel.setVisible(false);
 		
 		textFieldUsername = new JTextField();
 		textFieldUsername.setBounds(176, 23, 248, 20);
@@ -76,11 +67,6 @@ public class RegistrazioneView extends JFrame {
 		textFieldNumPatente.setBounds(176, 173, 248, 20);
 		contentPane.add(textFieldNumPatente);
 		textFieldNumPatente.setColumns(10);
-		
-		textFieldaPassword = new JTextField();
-		textFieldaPassword.setBounds(176, 223, 248, 20);
-		contentPane.add(textFieldaPassword);
-		textFieldaPassword.setColumns(10);
 		
 		JLabel lblUsername = new JLabel("Username");
 		lblUsername.setBounds(176, 0, 78, 25);
@@ -109,6 +95,8 @@ public class RegistrazioneView extends JFrame {
 		btnRegistrati = new JButton("Registrati");
 		btnRegistrati.setBounds(302, 254, 122, 23);
 		contentPane.add(btnRegistrati);
+		passwordField.setBounds(176, 223, 248, 20);
+		contentPane.add(passwordField);
 		
 		setVisible(true);
 	}
@@ -118,7 +106,11 @@ public class RegistrazioneView extends JFrame {
 		textFieldNome.setBackground(new Color(240, 115, 119));
 		textFieldCognome.setBackground(new Color(240, 115, 119));
 		textFieldNumPatente.setBackground(new Color(240, 115, 119));
-		textFieldaPassword.setBackground(new Color(240, 115, 119));
+		passwordField.setBackground(new Color(240, 115, 119));
+	}
+	
+	public void userExist() {
+		lblNewLabel.setVisible(true);
 	}
 
 	public JPanel getContentPane() {
@@ -141,8 +133,9 @@ public class RegistrazioneView extends JFrame {
 		return textFieldNumPatente;
 	}
 
-	public JTextField getTextFieldaPassword() {
-		return textFieldaPassword;
+
+	public JPasswordField getPasswordField() {
+		return passwordField;
 	}
 
 	public JButton getBtnLogin() {
@@ -152,6 +145,4 @@ public class RegistrazioneView extends JFrame {
 	public JButton getBtnRegistrati() {
 		return btnRegistrati;
 	}
-	
-	
 }

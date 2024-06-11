@@ -31,7 +31,9 @@ public class Utente {
 		
 		DatabaseFacade dbFacade = new DatabaseFacade();
 		try {
+			
 			dbFacade.getUtenteDB().user_Register(username, nome, cognome, password, numPatente);
+			
 		} catch (NoSuchAlgorithmException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -55,16 +57,13 @@ public class Utente {
 			cognome=facadeDB.getUtenteDB().OttieniParametroUtenteString("cognome", user, pass);
 			password=facadeDB.getUtenteDB().OttieniParametroUtenteString("password", user, pass);
 			numPatente=facadeDB.getUtenteDB().OttieniParametroUtenteString("numPatente", user, pass);
-			 System.out.println(toString());
+			System.out.println(toString());
 			
 			
 		} catch (SQLException e) {
 			
-			
 			e.printStackTrace();
 		}
-		
-		
 		
 		return login;
 	}
