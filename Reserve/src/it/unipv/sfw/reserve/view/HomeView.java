@@ -64,7 +64,7 @@ public class HomeView extends JFrame {
 		
 		lblNewLabel_2 = new JLabel("Inserisci le date per la tua prenotazione");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_2.setBounds(233, 24, 242, 36);
+		lblNewLabel_2.setBounds(233, 24, 269, 36);
 		contentPane.add(lblNewLabel_2);
 		
 		btnPrenota = new JButton("Prenota");
