@@ -55,15 +55,28 @@ public class RegistrazioneController {
 					, view.getTextFieldCognome().getText(), view.getPasswordField().getText()
 					, view.getTextFieldNumPatente().getText());
 			
+			if(model.isLogin()) {
+				model.setLogin(false);
+				view.dispose();
+				RegistrazioneView registrazioneView = new RegistrazioneView();
+				registrazioneView.userExist();
+				@SuppressWarnings("unused")
+				RegistrazioneController controller = new RegistrazioneController(registrazioneView, model);
+				
+			}else{
+			
 			view.dispose();
 			
 			Utente modelUtente = new Utente(null, null, null, null, null, false, null);
 			LoginView loginView = new LoginView();
 			@SuppressWarnings("unused")
 			LoginController controller =new LoginController(loginView, modelUtente);
+			}
 			
 			}else{
+				
 				view.dispose();
+				
 				RegistrazioneView registrazioneView = new RegistrazioneView();
 				registrazioneView.changeColorError();
 				@SuppressWarnings("unused")

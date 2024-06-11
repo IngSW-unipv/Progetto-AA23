@@ -31,8 +31,11 @@ public class Utente {
 		
 		DatabaseFacade dbFacade = new DatabaseFacade();
 		try {
+			login=dbFacade.getUtenteDB().exists(username);
 			
+			if(login==false) {
 			dbFacade.getUtenteDB().user_Register(username, nome, cognome, password, numPatente);
+			}
 			
 		} catch (NoSuchAlgorithmException e) {
 			// TODO Auto-generated catch block
